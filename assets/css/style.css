@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+    font-size: 35px;
+    color: blue;
+}
+
+#start {
+padding: 30px;
+margin-left: 650px;
+background-color: forestgreen;
+}
+
+body {
+    background-image: url("../images/field2.jpg");
+}
