@@ -11,5 +11,13 @@ background-color: forestgreen;
 }
 
 body {
-    background-image: url("../images/field2.jpg");
+    
+}
+
+
+#submit {
+   
+    padding: 50px;
+   
+    display: inline;
 }
