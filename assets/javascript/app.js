@@ -52,12 +52,12 @@ $(document).ready(function () {
 
 
     ]
-    var counter = 35;
+    var counter = 30;
     var currentQuestion = 0;
     var score = 0;
     var losses = 0;
-    var timer;
-
+    var timer = $("#timer")
+    
 
 
 
@@ -67,10 +67,16 @@ $(document).ready(function () {
 
 
 
-          
+            function myTimer() {
+                counter--;
+                $("#timer").empty();
+                $("#timer").text(counter);
+        
+            }
+            setInterval(myTimer, 1000);
 
             displayButton();
-            
+            myTimer();
 
         })
 
@@ -80,8 +86,7 @@ $(document).ready(function () {
     makeQuiz();
     function displayButton() {
     
-        
-        $("#timer").append(counter);
+  
         $("#gameContainer").empty();
         var question = myQuestions[currentQuestion].question;
         $("#gameContainer").append("<div>" + question + "</div>");
@@ -103,7 +108,6 @@ $(document).ready(function () {
                 losses++;
                 if(currentQuestion < 4) {
 
-                
                 displayButton();
                 }
             }      
@@ -112,6 +116,6 @@ $(document).ready(function () {
   
 
     })
-
+    
 })
 

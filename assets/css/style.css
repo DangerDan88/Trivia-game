@@ -5,19 +5,25 @@ h1 {
 }
 
 #start {
-padding: 30px;
+padding: 50px;
 margin-left: 650px;
 background-color: forestgreen;
 }
 
 body {
-    
+    background-image: url("../images/blue.jpg");
+    display: inline;
 }
 
 
 #submit {
    
     padding: 50px;
-   
-    display: inline;
+   margin-top: 300px;
+   margin-left: 650px;
+    
+}
+
+#gameContainer, #timer {
+    text-align: center;
 }
