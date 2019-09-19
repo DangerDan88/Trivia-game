@@ -71,9 +71,13 @@ $(document).ready(function () {
                 counter--;
                 $("#timer").empty();
                 $("#timer").text(counter);
+                if(counter === 0) {
+                    clearInterval(clock);
+                    alert("Times up");
+                }
         
             }
-            setInterval(myTimer, 1000);
+          var clock =  setInterval(myTimer, 1000);
 
             displayButton();
             myTimer();
