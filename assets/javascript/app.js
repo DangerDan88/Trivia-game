@@ -120,6 +120,10 @@ $(document).ready(function () {
   
 
     })
+    document.getElementById("submit").addEventListener("click", function (event) {
+            $("#results").text("This is how many you had right  " + score,);
+            $("#results").append("  This is how many you had wrong  " + losses);
+    })
     
 })
 
