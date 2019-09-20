@@ -47,8 +47,56 @@ $(document).ready(function () {
 
             ],
             correctAnswer: "81"
-        }
+        },
+        //
+        {
+            question: "Who has the most rushing yards in a game in NFL history?",
+            answers: [
+                "Adrian Peterson",
+                "Walter Payton",
+                "Zeke Elliot",
+                "Corey Dillon",
 
+            ],
+            correctAnswer: "Adrian Peterson"
+        },
+
+        {
+            question: "Most passing yards in a season NFL history?",
+            answers: [
+                "Tom Brady",
+                "Drew Brees",
+                "Peyton Manning",
+                "Kurt Warner",
+
+            ],
+            correctAnswer: "Peyton Manning"
+        },
+
+        {
+            question: "What team did Andrew Luck play for?",
+            answers: [
+                "The Colts",
+                "The Ravens",
+                "The Jets",
+                "The Cardinals",
+
+            ],
+            correctAnswer: "The Colts"
+        },
+
+        {
+            question: "How many points is the most Kobe Bryant scored in a game?",
+            answers: [
+                "77",
+                "65",
+                "80",
+                "81",
+
+
+            ],
+            correctAnswer: "81"
+        }
 
 
     ]
@@ -104,13 +152,13 @@ $(document).ready(function () {
         if(event.target.id === "answerButton") {
             if (event.target.innerText === myQuestions[currentQuestion-1].correctAnswer) {
                 score++;
-                if (currentQuestion < 4){
+                if (currentQuestion < 9){
                 displayButton();
                 }
             } 
             else {
                 losses++;
-                if(currentQuestion < 4) {
+                if(currentQuestion < 9) {
 
                 displayButton();
                 }
