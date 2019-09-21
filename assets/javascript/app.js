@@ -1,4 +1,4 @@
-window.onload = function () {
+$(document).ready(function () {
     var myQuestions = [
         {
             question: "Which NBA franchise has the most championships?",
@@ -173,5 +173,5 @@ window.onload = function () {
             $("#results").append("  This is how many you had wrong  " + losses);
     })
     
-}
+})
 
