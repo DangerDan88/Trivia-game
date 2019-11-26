@@ -119,7 +119,7 @@ $(document).ready(function () {
                 counter--;
                 $("#timer").empty();
                 $("#timer").text(counter);
-                if(counter === 0) {
+                if(counter <= 0) {
                     clearInterval(clock);
                     alert("Times up");
                 }

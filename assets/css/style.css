@@ -1,37 +1,4 @@
-h1 {
-    text-align: center;
-    font-size: 35px;
-    color: blue;
+
+button {
+    float: right;
 }
-
-#start {
-padding: 50px;
-margin-left: 650px;
-background-color: forestgreen;
-}
-
-body {
-    background-image: url("../images/blue.jpg");
-    display: inline;
-}
-
-
-#submit {
-   
-    padding: 50px;
-   margin-top: 300px;
-   margin-left: 650px;
-    
-}
-
-#gameContainer, #timer {
-    text-align: center;
-  
-}
-
-#results {
-    text-align: center;
-    font: 100px;
-}
-
-
