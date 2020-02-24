@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var myQuestions = [
+  const myQuestions = [
     {
       question: "Which NBA franchise has the most championships?",
       answers: ["Lakers", "Jazz", "Celtics", "Wizards"],
@@ -58,14 +58,22 @@ $(document).ready(function() {
       correctAnswer: "81"
     }
   ];
-  var counter = 30;
-  var currentQuestion = 0;
-  var score = 0;
-  var losses = 0;
-  var timer = $("#timer");
+  // question list for game above
+  let counter = 30;
+  let currentQuestion = 0;
+  let score = 0;
+  let losses = 0;
+  let timer = $("#timer");
+  const button = document.querySelector(".toggle-button");
+  const content = document.querySelector('.toggle-content');
 
-  function startQuiz() {
-    var showSubmitButton = document.getElementById("buttonDiv");
+button.addEventListener('click', () => {
+  console.log("event listneer for button");
+})
+
+
+  function submitButton() {
+    const showSubmitButton = document.getElementById("buttonDiv");
     if (showSubmitButton.style.display === "none") {
       showSubmitButton.style.display = "block";
     } else {
@@ -75,8 +83,6 @@ $(document).ready(function() {
 
   function makeQuiz() {
     document.getElementById("start").addEventListener("click", function() {
-      startQuiz();
-
       function myTimer() {
         counter--;
         $("#timer").empty();
@@ -86,16 +92,17 @@ $(document).ready(function() {
           alert("Times up");
         }
       }
-      var clock = setInterval(myTimer, 1000);
+      let clock = setInterval(myTimer, 1000);
 
       displayButton();
       myTimer();
+      submitButton();
     });
   }
   makeQuiz();
   function displayButton() {
     $("#gameContainer").empty();
-    const question = myQuestions[currentQuestion].question;
+    let question = myQuestions[currentQuestion].question;
     $("#gameContainer").append("<div>" + question + "</div>");
     for (i = 0; i < myQuestions[currentQuestion].answers.length; i++) {
       $("#gameContainer").append(

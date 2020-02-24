@@ -2,15 +2,14 @@
 <html>
   <head>
     <title>Trivia game</title>
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
-    <link rel="images" href="./assets/images/blue.jpg" />
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
       integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.7.1.min.js"
@@ -42,14 +41,18 @@
         <div id="results"></div>
       </div>
     </div>
-    <div class="d-flex justify-content-center" id="timer"> 
+    <div class="d-flex justify-content-center" id="timer"></div>
 
-    </div>
-    
     <div class="d-flex justify-content-center">
-      <button onclick="startQuiz()" id="start" class="btn btn-primary btn-lg">Start</button>
+      <button onclick="startQuiz()" id="start" class="toggle-button btn btn-primary btn-lg" aria-controls="toggle-content">
+        Start
+      </button>
     </div>
-    <div id="buttonDiv" class="d-flex justify-content-center"></div>
+    <div id="toggle-content" class="toggle-content" aria-hidden="true">
+      <button id="submit" class="btn btn-success btn-lg">
+        Submit
+      </button>
+    </div>
     <footer class="d-flex justify-content-center">
       Daniel Osornio 2020 University of Utah Coding BootCamp
     </footer>
